@@ -255,6 +255,67 @@
 
         </section>
 
+
+        <section id="Eight">
+
+          <div class="row">
+            <H1>Tooltip</H1>
+          </div>
+          <div class="row">
+            <a type="button" class="btn btn-warning btn-block"
+            data-toggle="tooltip"
+            title="Or Call us at +852 12345678"
+            data-placement="top|right"
+            href="#">Tooltip</a>
+          </div>
+
+          <div class="row">
+            <H1>Popover</H1>
+          </div>
+          <div class="row">
+            <button type="button" class="btn btn-warning"
+            data-toggle="popover"
+            title="message title"
+            data-content="this is the message body"
+            data-placement="top"
+            >Popover</a>
+          </div>
+
+
+          <div class="row">
+            <H1>Modal</H1>
+          </div>
+          <div class="row">
+            <div id="loginModal" class="modal fade" role="dialog">
+              <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Login </h4>
+                  </div>
+                  <div class="modal-body">
+                    <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Cancel</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a data-toggle="modal" data-target="#loginModal">
+                <span class="glyphicon glyphicon-log-in"></span>
+                Login
+              </a>
+            </li>
+          </ul>
+
+
+
+        </section>
+
       </div>
 
       <nav id="mytarget_nav" class="col-md-2">
@@ -275,6 +336,18 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+
+    <script>
+      $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip();
+      });
+    </script>
+    <script>
+      $(document).ready(function(){
+        $('[data-toggle="popover"]').popover();
+      });
+    </script>
+
 </body>
 
 </html>
